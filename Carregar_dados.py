@@ -1,6 +1,4 @@
 #Etapa 01 : Ler o arquivo CSV com os dados das eleições
-
-
 import pandas as pd
 
 CAMINHO_CSV = 'eleicoes.csv'
