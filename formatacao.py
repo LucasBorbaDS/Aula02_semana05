@@ -1,14 +1,15 @@
-# Módulo de utilidades para formatar valores numéricos em padrão brasileiro.
-# Ele converte números para strings com separação de milhar e vírgula decimal.
-
+"""Ferramentas de exibição usadas por todas as etapas."""
 from rich.console import Console
-
-# Instância global do console para impressão formatada em terminal.
+# O "console" do rich é o que imprime tabelas e cores no terminal.
+# Criamos um só aqui e todas as etapas usam o mesmo.
 console = Console()
-
-
-def numero_br(valor, casas_decimais=0):
-    # Converte um número para o formato brasileiro, por exemplo: 1234.5 -> 1.234,5.
-    texto = f"{valor:,.{casas_decimais}f}"
-    texto = texto.replace(",", "X").replace(".", ",").replace("X", ".")
+def numero_br(valor, casas=0):
+    """Escreve um número no padrão brasileiro. Ex.: 1008 -> "1.008" e 41.6 -> "41,6"."""
+    # O Python escreve no padrão americano: 1008.5 vira "1,008.5"
+    texto = f"{valor:,.{casas}f}"
+    # Precisamos trocar "," por "." e "." por ",".
+    # Usamos um "X" temporário para as trocas não se misturarem.
+    texto = texto.replace(",", "X")
+    texto = texto.replace(".", ",")
+    texto = texto.replace("X", ".")
     return texto
