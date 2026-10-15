@@ -20,3 +20,4 @@ def mostrar_amostra(df, linhas=5):
 if __name__ == "__main__":
     df = carregar_dados()
     mostrar_amostra(df, linhas=5)
+    

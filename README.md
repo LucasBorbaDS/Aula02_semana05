@@ -22,6 +22,7 @@ arquivo CSV.
 ```text
 Aula02_semana05/
 ├── README.md
+├── projeto_eleicoes.ipynb
 ├── main.py
 ├── formatacao.py
 ├── etapa1_carregar.py
@@ -88,6 +89,11 @@ uv run python etapa4_partidos.py
 uv run python etapa5_vencedores.py
 uv run python etapa6_exportar.py
 ```
+
+Para executar todo o projeto de forma interativa, abra `projeto_eleicoes.ipynb`
+no JupyterLab ou no VS Code e execute as células em ordem. O notebook é
+autocontido e reproduz as seis etapas do programa, incluindo a exportação de
+`dados/resultado_prefeitos.csv`.
 
 ## Formato dos dados
 
